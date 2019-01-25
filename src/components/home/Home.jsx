@@ -12,7 +12,7 @@ export default class Home extends Component {
     // Increment number function
     incrementNumber = () => {
         let { number } = this.state
-        if(number === 100) return
+        if(number >= 100) return
         number ++
         changeValue(number)
         .then(res => this.getNumber())
@@ -22,7 +22,7 @@ export default class Home extends Component {
     // Decrement number function
     decrementNumber = () => {
         let { number } = this.state
-        if(number === 0) return
+        if(number <= 0) return
         number --
         changeValue(number)
         .then(res => this.getNumber())
